@@ -13,21 +13,19 @@ struct ContentView: View {
  
     var body: some View {
         TabView(selection: $selection){
-            Text("First View")
+            Text("1")
                 .font(.title)
                 .tabItem {
                     VStack {
                         Image("first")
-                        Text("First")
                     }
                 }
                 .tag(0)
-            Text("Second View")
+            Text("2")
                 .font(.title)
                 .tabItem {
                     VStack {
                         Image("second")
-                        Text("Second")
                     }
                 }
                 .tag(1)
@@ -37,6 +35,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView().saturation(0).blendMode(BlendMode.saturation)
     }
 }
